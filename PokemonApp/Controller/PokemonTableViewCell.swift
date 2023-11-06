@@ -9,22 +9,29 @@ import UIKit
 
 class PokemonTableViewCell: UITableViewCell {
     
- /*   @IBOutlet weak var movieImageView: UIImageView!
-    @IBOutlet weak var movieLabel: UILabel!
-    @IBOutlet weak var yearLabel: UILabel!
-    @IBOutlet weak var genresLabel: UILabel!
     
-    func configure(with movie: Movie) {
-           movieImageView.image = UIImage(named: movie.imageNames)
-           movieLabel.text = movie.movieTitles
-           yearLabel.text = "\(movie.releaseYears)"
-           genresLabel.text = movie.movieGenres
-       } */
+    @IBOutlet weak var pokemonImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+   
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    func configure(with pokemon: Card) {
+            nameLabel.text = pokemon.name
+
+            if let imageURL = URL(string: pokemon.imageURL) {
+                DispatchQueue.global().async {
+                    if let data = try? Data(contentsOf: imageURL) {
+                        DispatchQueue.main.async {
+                            self.pokemonImageView.image = UIImage(data: data)
+                        }
+                    }
+                }
+            }
+        }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
