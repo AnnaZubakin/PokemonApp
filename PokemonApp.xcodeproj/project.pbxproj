@@ -15,6 +15,7 @@
 		BC00E23E2AF949C9005D3517 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC00E23C2AF949C9005D3517 /* LaunchScreen.storyboard */; };
 		BC00E2492AF94AF1005D3517 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC00E2482AF94AF1005D3517 /* Pokemon.swift */; };
 		BC00E24C2AF9532A005D3517 /* PokemonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC00E24B2AF9532A005D3517 /* PokemonTableViewCell.swift */; };
+		BC00E24E2AFCE3EC005D3517 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC00E24D2AFCE3EC005D3517 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		BC00E23F2AF949C9005D3517 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC00E2482AF94AF1005D3517 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		BC00E24B2AF9532A005D3517 /* PokemonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTableViewCell.swift; sourceTree = "<group>"; };
+		BC00E24D2AFCE3EC005D3517 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 			children = (
 				BC00E2352AF949C5005D3517 /* ViewController.swift */,
 				BC00E24B2AF9532A005D3517 /* PokemonTableViewCell.swift */,
+				BC00E24D2AFCE3EC005D3517 /* DetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 				BC00E2362AF949C5005D3517 /* ViewController.swift in Sources */,
 				BC00E2492AF94AF1005D3517 /* Pokemon.swift in Sources */,
 				BC00E2322AF949C5005D3517 /* AppDelegate.swift in Sources */,
+				BC00E24E2AFCE3EC005D3517 /* DetailViewController.swift in Sources */,
 				BC00E24C2AF9532A005D3517 /* PokemonTableViewCell.swift in Sources */,
 				BC00E2342AF949C5005D3517 /* SceneDelegate.swift in Sources */,
 			);

@@ -18,7 +18,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         pokemonTableView.dataSource = self
         pokemonTableView.delegate = self
-       // loadPokemonData(completion: <#() -> Void#>)
         loadPokemonData {
                DispatchQueue.main.async {
                    self.pokemonTableView.reloadData()
@@ -77,6 +76,29 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 280
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Selected row at index: \(indexPath.row)")
+        let selectedPokemon = pokey[indexPath.row]
+        performSegue(withIdentifier: "showDetail", sender: selectedPokemon)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let detailVC = segue.destination as? DetailViewController,
+           let selectedPokemon = sender as? Card {
+            detailVC.card = selectedPokemon
+        }
+    }
+    
+ /*   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let indexPath = tableView.indexPathForSelectedRow {
+            guard let detailVC = segue.destination as? DetailViewController else
+            { return }
+            // Pass the selected object to the new view controller.
+            detailVC.card = pokey[indexPath.row]
+        }
+    } */
 
         }
 
